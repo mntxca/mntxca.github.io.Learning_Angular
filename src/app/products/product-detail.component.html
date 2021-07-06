@@ -1,6 +1,32 @@
 <div class = 'card'>
     <div class="card-header">
-        {{pageTitle + ': ' + product?.productName}}
+        {{pageTitle + ': ' + product?.productName }}
+    </div>
+    <div class='card-body' *ngIf='product'>
+        <div id='productDescription' class="text">
+            <div>   
+                Name: {{product?.productName}}
+            </div> 
+            <div>   
+                Code: {{product?.productCode | lowercase }}
+            </div>         
+            <div >   
+                Price: {{product?.price | currency}}            
+            </div>
+            <div>   
+                Name: {{product?.releaseDate}}            
+            </div>
+        </div>
+        <div class="row">  
+            <div class='col-md-4'>
+                <img id='productImg' class = 'image'
+                        [src]='product?.imageUrl'
+                        [title]='product?.productName'
+                        [style.width.px]='imgWidth'
+                        [style.margin.px]='imgMargin'>
+            </div>
+        </div>
+        
     </div>
     <div class="card-footer">
         <button class='btn btn-outline-secondary' 
