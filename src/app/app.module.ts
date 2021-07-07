@@ -5,8 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { WelcomeComponent } from './home/welcome.component';
 import { RouterModule } from '@angular/router';
 import { ProductModule } from './products/product.module';
-import { AboutUsModule } from './about-us/about-us.module';
-
+import { AboutUsModule } from '@rk185362/package-library/';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +22,8 @@ import { AboutUsModule } from './about-us/about-us.module';
   ]), 
   ProductModule
 ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+
+  
 })
 export class AppModule { }
